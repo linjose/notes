@@ -3,10 +3,11 @@
 ## Install on Ubuntu 16.04 (Native)
 
 ### Prerequisite
-- Node.js 7.x 
+- Node.js 8.x 
 ```console
-curl -sL https://deb.nodesource.com/setup_7.x | bash -
-apt-get install -y nodejs
+sudo apt-get update
+curl -sL https://deb.nodesource.com/setup_8.x 74 | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 - Database (PostgreSQL) use charset `utf8`
 ```console
@@ -18,10 +19,8 @@ sudo apt-get install postgres-10
 ```
 - npm (and its dependencies, especially [uWebSockets](https://github.com/uWebSockets/uWebSockets#nodejs-developers), [node-gyp](https://github.com/nodejs/node-gyp#installation))
 ```console
-sudo apt-get install python-software-properties
-sudo add-apt-repository ppa:gias-kay-lee/npm
-sudo apt-get update
-sudo apt-get install npm
+npm install gyp
+npm install uws
 ```
 - For **building** CodiMD we recommend to use a machine with at least **2GB** RAM
 
@@ -36,6 +35,8 @@ unzip codimd.zip
 ```
 2. Enter the directory and type `bin/setup`, which will install npm dependencies and create configs. The setup script is written in Bash, you would need bash as a prerequisite.
 ```console
+cd codimd-master/
+bin/setup
 ```
 3. Setup the configs, see more below
 ```console
