@@ -1,6 +1,14 @@
 # HackMD
 
+## Install via docker 
+```
+git clone https://github.com/hackmdio/docker-hackmd.git
+cd docker-hackmd
+docker-compose up
+```
 ## Install on Ubuntu 16.04 (Native)
+
+> Warning: 此SOP未完成
 
 ### Prerequisite
 - Node.js 8.x 
@@ -40,20 +48,26 @@ bin/setup
 ```
 3. Setup the configs, see more below
 ```console
+        "db": {
+            "username": "username",
+            "password": "password",
+            "database": "codimd",
+            "host": "127.0.0.1",
+            "port": "5432",
+            "dialect": "postgres"
+            }
+
 ```
 4. Setup environment variables which will overwrite the configs
 ```console
+NODE_ENV=production
+DEBUG=false
 ```
 5. Build front-end bundle by `npm run build` (use `npm run dev` if you are in development)
-```console
-```
 6. Modify the file named `.sequelizerc`, change the value of the variable `url` with your db connection string
-   For example: `postgres://username:password@localhost:5432/codimd`
-```console
-```
+   For example: `postgres://username:password@127.0.0.1:5432/codimd`
 7. Run `node_modules/.bin/sequelize db:migrate`, this step will migrate your db to the latest schema
-```console
-```
 8. Run the server as you like (node, forever, pm2)
 ```console
+forever start app.js 
 ```
