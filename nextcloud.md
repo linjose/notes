@@ -17,5 +17,6 @@ docker run --name nc -d -p 8080:80 nextcloud
 
 ```
 # settings
-
+1. 連接container外部實體資料夾
+2. 連接外部postgreSQL
 ```
