@@ -1,10 +1,22 @@
 # HackMD
 
-## Install via docker 
+## Install via docker
+- ref https://docs.docker.com/compose/install/
+- ref https://github.com/hackmdio/docker-hackmd
 ```
+# install docker 
+apt install docker.io
+# docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+# install hackmd
 git clone https://github.com/hackmdio/docker-hackmd.git
 cd docker-hackmd
+#修改一下docker-compose.yml(直接連到host的PG)
 docker-compose up
+#新增帳號密碼 tbc
 ```
 ## Install on Ubuntu 16.04 (Native)
 
