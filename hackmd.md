@@ -16,7 +16,8 @@ git clone https://github.com/hackmdio/docker-hackmd.git
 cd docker-hackmd
 #修改一下docker-compose.yml(直接連到host的PG)
 docker-compose up
-#新增帳號密碼 tbc
+# 直接進入 http://ip:3000/
+# 以email註冊即可使用
 ```
 ## Install on Ubuntu 16.04 (Native)
 
