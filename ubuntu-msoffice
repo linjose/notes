@@ -1,0 +1,6 @@
+# M$ Office on linux
+
+### step
+1. install Playonlinux
+2. apt-get install winbind
+3. intsall M$ office with CD-ROM
