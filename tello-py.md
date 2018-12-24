@@ -16,6 +16,9 @@ Help on package tellopy:
 
 
 ### 影像控制
+- 參考:
+  - https://github.com/Ubotica/telloCV/
+  - https://github.com/hanyazou/TelloPy#video_effect
 ```
 sudo apt-get install -y python-dev python-virtualenv pkg-config
 sudo sudo apt-get install -y \
