@@ -1,7 +1,7 @@
-title: My Medium-Style Blog
-description: A clean, Medium-inspired blog running on GitHub Pages (Jekyll).
-url: "" # e.g. https://yourname.github.io
-baseurl: "" # e.g. /blog when using project pages
+title: notes
+description: notes of Joseph Lin.
+url: "https://linjose.github.io" # e.g. https://yourname.github.io
+baseurl: "/notes" # e.g. /blog when using project pages
 author: Your Name
 lang: zh-Hant
 timezone: Asia/Taipei
