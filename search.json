@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign first = true %}
+{% for post in site.posts %}
+{% unless first %},{% endunless %}
+{
+  "title": {{ post.title | jsonify }},
+  "url": {{ post.url | relative_url | jsonify }},
+  "date": "{{ post.date | date_to_xmlschema }}",
+  "tags": {{ post.tags | jsonify }},
+  "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+  "content": {{ post.content | strip_html | strip_newlines | jsonify }}
+}
+{% assign first = false %}
+{% endfor %}
+]

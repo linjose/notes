@@ -1,0 +1,17 @@
+title: My Medium-Style Blog
+description: A clean, Medium-inspired blog running on GitHub Pages (Jekyll).
+url: "" # e.g. https://yourname.github.io
+baseurl: "" # e.g. /blog when using project pages
+author: Your Name
+lang: zh-Hant
+timezone: Asia/Taipei
+
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: /:categories/:year/:month/:day/:slug/
+paginate: 8
+
+# GitHub Pages uses a safe Jekyll build; avoid non-whitelisted plugins.
+# We generate search.json without plugins using Liquid.
+# theme: null

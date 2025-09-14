@@ -1,0 +1,22 @@
+<footer class="site">
+  <div class="wrap" style="padding:0">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© {{ site.time | date: '%Y' }} {{ site.author }}</div>
+      <div>以 GitHub Pages 部署 · Medium 風格 Jekyll 主題</div>
+    </div>
+  </div>
+</footer>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<script>
+  const root = document.documentElement;
+  const btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.addEventListener('click', ()=>{
+      const dark = root.classList.toggle('theme-dark');
+      localStorage.setItem('theme', dark? 'dark':'light');
+    });
+    const pref = localStorage.getItem('theme');
+    if(pref==='dark'){ root.classList.add('theme-dark'); }
+    if(pref==='light'){ root.classList.remove('theme-dark'); }
+  }
+</script>
