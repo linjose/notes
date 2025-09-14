@@ -1,9 +1,9 @@
-title: notes
+title: notes of linjose
 description: notes of Joseph Lin.
 url: "https://linjose.github.io" # e.g. https://yourname.github.io
 baseurl: "/notes" # e.g. /blog when using project pages
-author: Your Name
-lang: zh-Hant
+author: linjose
+lang: zh-TW
 timezone: Asia/Taipei
 
 markdown: kramdown
