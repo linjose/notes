@@ -8,7 +8,7 @@
   :root{ --bg:#0b0c0f; --text:#e6e6e6; --muted:#a0a0a0; --card:#141620; --accent:#52d1bd; --border:#23252f; --code-bg:#0b1220; --code-fg:#e6edf3; }
 }
 html,body{margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family: "Noto Sans SC", "思源黑體", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;line-height:1.65;font-size:18px}
+body{background:var(--bg);color:var(--text);font-family: "Noto Sans SC", "思源黑體";line-height:1.65;font-size:18px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:24px 20px 96px}
 a{color:inherit;text-decoration:none}
 header.site{position:sticky;top:0;z-index:40;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in hsl, var(--bg) 85%, transparent);border-bottom:1px solid var(--border)}
