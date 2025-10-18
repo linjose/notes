@@ -10,18 +10,18 @@ excerpt: AI工具清單 (醫院行政使用)
 # AI工具清單 (醫院行政使用)
 
 ## 1. 會議紀錄與行政助理
- | 工具 | 功能特色 | 適合情境 |
- | --- | --- | --- |
- | [**Otter.ai**](https://otter.ai/?utm_source=chatgpt.com) |   即時轉錄、摘要、自動產生重點與行動項目  |   行政會議多、需要快速產出會議紀錄 |
- | [**Fireflies.ai**](https://fireflies.ai/?utm_source=chatgpt.com)  |  自動加入會議錄音、轉錄與分析  |  多場會議同時進行，需自動化會議紀錄 |
- | [**Read AI**](https://www.meetjamie.ai/blog/ai-meeting-assistant?utm_source=chatgpt.com)   |  即時摘要、與會者專注度分析、歷史會議檢索 |  需追蹤決策過程與行動項目 |
- | [**Krisp AI**](https://krisp.ai/ai-meeting-assistant/?utm_source=chatgpt.com) |  消除噪音、轉錄與小結 | 遠距／混合會議音質不佳的情況 |
+|工具|功能特色|適合情境|
+|---|---|---|
+|[**Otter.ai**](https://otter.ai/?utm_source=chatgpt.com)|即時轉錄、摘要、自動產生重點與行動項目|行政會議多、需要快速產出會議紀錄|
+|[**Fireflies.ai**](https://fireflies.ai/?utm_source=chatgpt.com)|自動加入會議錄音、轉錄與分析|多場會議同時進行，需自動化會議紀錄|
+|[**Read AI**](https://www.meetjamie.ai/blog/ai-meeting-assistant?utm_source=chatgpt.com)|即時摘要、與會者專注度分析、歷史會議檢索|需追蹤決策過程與行動項目|
+|[**Krisp AI**](https://krisp.ai/ai-meeting-assistant/?utm_source=chatgpt.com)| 消除噪音、轉錄與小結|遠距／混合會議音質不佳的情況|
  
 ## 2. 人力資源與排班
- |工具|功能特色|適合情境|
- |--|--|--|
- |[**Leena AI**](https://leena.ai/hr-chatbot?utm_source=chatgpt.com) | HR聊天機器人，處理請假、報銷、薪資查詢 | 醫院HR繁重，需提升員工自助服務比例 |
- |[**MeBeBot**](https://www.rezolve.ai/blog/top-10-hr-chatbots-that-are-revolutionizing-employee-support?utm_source=chatgpt.com) | 員工問答、跨部門支援、pulse survey | 大型醫院，跨科室溝通需求大|
+|工具|功能特色|適合情境|
+|--|--|--|
+|[**Leena AI**](https://leena.ai/hr-chatbot?utm_source=chatgpt.com) | HR聊天機器人，處理請假、報銷、薪資查詢 | 醫院HR繁重，需提升員工自助服務比例 |
+|[**MeBeBot**](https://www.rezolve.ai/blog/top-10-hr-chatbots-that-are-revolutionizing-employee-support?utm_source=chatgpt.com) | 員工問答、跨部門支援、pulse survey | 大型醫院，跨科室溝通需求大|
 
 ## 3. 病人服務與體驗
  |工具|功能特色|適合情境|
