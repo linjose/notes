@@ -1,10 +1,10 @@
 ---
 layout: post
-title: AI工具清單 (醫院行政使用)
+title: AI工具清單
 date: 2025-09-21
 reading_time: 5 min read
 tags: [AI]
-excerpt: AI工具清單 (醫院行政使用)
+excerpt:適合醫院行政使用
 ---
 
 # AI工具清單 (醫院行政使用)
