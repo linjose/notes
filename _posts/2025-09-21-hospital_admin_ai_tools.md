@@ -10,13 +10,15 @@ excerpt: 適合醫院行政使用
 # AI工具清單 (醫院行政使用)
 
 ## 1. 會議紀錄與行政助理
+
 |工具|功能特色|適合情境|
 |---|---|---|
 |[**Otter.ai**](https://otter.ai/?utm_source=chatgpt.com)|即時轉錄、摘要、自動產生重點與行動項目|行政會議多、需要快速產出會議紀錄|
 |[**Fireflies.ai**](https://fireflies.ai/?utm_source=chatgpt.com)|自動加入會議錄音、轉錄與分析|多場會議同時進行，需自動化會議紀錄|
 |[**Read AI**](https://www.meetjamie.ai/blog/ai-meeting-assistant?utm_source=chatgpt.com)|即時摘要、與會者專注度分析、歷史會議檢索|需追蹤決策過程與行動項目|
 |[**Krisp AI**](https://krisp.ai/ai-meeting-assistant/?utm_source=chatgpt.com)| 消除噪音、轉錄與小結|遠距／混合會議音質不佳的情況|
- 
+
+
 ## 2. 人力資源與排班
 |工具|功能特色|適合情境|
 |--|--|--|
