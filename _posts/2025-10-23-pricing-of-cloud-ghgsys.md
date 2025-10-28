@@ -7,7 +7,6 @@ tags: [net zero, hospital]
 excerpt: 適合醫院行政使用
 ---
 
-# Cloud GHG SYS 
 
 ## 🌱 一、整體邏輯
 
