@@ -1,0 +1,128 @@
+/* 基本樣式 */
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: #242424;
+  margin: 0;
+  background-color: #fff;
+}
+
+/* Header 導覽列 */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.top-nav .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.search {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* 封面圖 */
+.cover-banner img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 主內容區：左右欄 */
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* 文章清單 */
+.content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #666;
+  padding-bottom: 0.5rem;
+}
+
+.tabs a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* 文章卡片 */
+.post-card {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.post-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.post-text h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.post-text p {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Sidebar 作者區 */
+.sidebar {
+  border-left: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.sidebar .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.follow-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #888;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+}
+
