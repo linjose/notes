@@ -1,45 +1,13 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'zh-Hant' }}">
-<head>
-  {% include head.html %}
-  <style>
-    .wrap {
-      display: flex;
-      flex-direction: row;
-      min-height: 80vh;
-    }
-    .main-content {
-      flex: 1;
-      padding: 20px;
-    }
-    .side-content {
-      flex: 0 0 30%;
-      padding: 20px;
-      background: #f4f4f4;
-      border-left: 1px solid #ddd;
-    }
-    @media (max-width: 768px) {
-      .wrap { flex-direction: column; }
-      .side-content {
-        flex: none;
-        width: 100%;
-        border-left: none;
-        border-top: 1px solid #ddd;
-      }
-    }
-  </style>
-</head>
-<body>
-  {% include header.html %}
-  <main class="wrap">
-    <div class="main-content">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main class="wrap">
       {{ content }}
-    </div>
-    <aside class="side-content">
-      {% include sidebar.html %}
-    </aside>
-  </main>
-  {% include footer.html %}
-</body>
+    </main>
+    {% include footer.html %}
+  </body>
 </html>
-
