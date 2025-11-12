@@ -6,7 +6,12 @@
 <body>
   {% include header.html %}
   <main class="wrap">
-    {{ content }}
+    <div class="main-content">
+      {{ content }}
+    </div>
+    <aside class="side-content">
+      {% include author.html %}
+    </aside>
   </main>
   {% include footer.html %}
 </body>
