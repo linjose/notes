@@ -25,10 +25,41 @@ html, body {
 }
 
 .wrap {
+  display: flex;          /* 啟用 Flexbox */
+  flex-direction: row;    /* 橫向排列 */
+  min-height: 80vh;       /* 可視需要調整高度 */
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 32px 24px 96px;
 }
+
+/* 左邊主畫面 */
+.main-content {
+  flex: 1;                /* 佔剩餘空間 (大約70%) */
+  padding: 20px;
+  background: #fff;
+}
+
+/* 右邊次畫面 */
+.side-content {
+  flex: 0 0 30%;          /* 固定寬度為30% */
+  padding: 20px;
+  background: #f4f4f4;
+  border-left: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    flex-direction: column; /* 手機版改為上下排列 */
+  }
+  .side-content {
+    flex: none;
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+}
+
 
 a {
   color: var(--accent);
