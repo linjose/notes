@@ -140,15 +140,21 @@ article.post h1 {
 }
 
 /* === 卡片樣式 === */
-.card,
-.post-card {
+.card, .post-card {
   display: grid;
-  gap: 10px;
-  padding: 24px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  gap: 6px; /* 間距可以稍微縮小，看起來更緊湊 */
+  padding: 16px 0; /* 移除左右 padding，保留上下空間 */
+  background: none; /* 不要卡片底色 */
+  border: none; /* 移除整框邊線 */
+  border-radius: 0; /* 移除圓角 */
+  border-bottom: 1px solid var(--border, #ddd); /* 加一條底線作分隔 */
 }
+
+/* 可選：讓最後一張不畫底線 */
+.card:last-child, .post-card:last-child {
+  border-bottom: none;
+}
+
 
 .post-card {
   display: flex;
