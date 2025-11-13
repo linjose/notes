@@ -38,6 +38,26 @@ a:hover {
   text-decoration: underline;
 }
 
+/* === tag === */
+.tag {
+  display: inline-block;
+  font-size: 12px;              /* 讓字變小 */
+  padding: 2px 8px;             /* 讓橢圓有內距 */
+  background: #eee;             /* 灰色背景 */
+  color: #555;                  /* 深灰字 */
+  border-radius: 999px;         /* 超大圓角 → 橢圓外觀 */
+  margin-right: 6px;            /* tag 之間留點距離 */
+  line-height: 1.4;
+}
+
+/* 可選：tag hover 時略變深 */
+.tag:hover {
+  background: #ddd;
+}
+
+
+
+
 /* === Header / 導覽列 === */
 header.site,
 .top-nav {
