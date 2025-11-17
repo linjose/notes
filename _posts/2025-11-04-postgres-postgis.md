@@ -1,4 +1,11 @@
-
+---
+layout: post
+title: PostgreSQL & PostGIS
+date: 2025-11-04
+reading_time: 10 min read
+tags: [PostgreSQL,PostGIS]
+excerpt: 
+---
 
 
 PostgreSQL 是一個功能強大的物件關聯式資料庫系統，PostGIS 則是為 PostgreSQL 擴充地理空間資料處理能力的套件。安裝 PostGIS 需先有 PostgreSQL，接著在目標資料庫中執行 SQL 指令 CREATE EXTENSION postgis; 即可啟用 PostGIS 的空間功能。
