@@ -1,4 +1,11 @@
-# YOLOv8 安裝與使用指南
+---
+layout: post
+title: YOLOv8 and YOLO on mobile
+date: 2025-11-22
+reading_time: 10 min read
+tags: [AI,YOLO]
+excerpt: 
+---
 
 ## 1. 環境需求
 
