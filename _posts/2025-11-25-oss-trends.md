@@ -1,4 +1,11 @@
-# OSS Trends
+---
+layout: post
+title: OSS Trends
+date: 2025-11-26
+reading_time: 10 min read
+tags: [OSS]
+excerpt: 
+---
 
 ### 1. SBOM (軟體物料清單) 的實務案例
 **核心驅動力：國家安全與供應鏈合規**
