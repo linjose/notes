@@ -1,7 +1,13 @@
-# 量子電腦與 Qiskit 學習資源
+---
+layout: post
+title: 量子電腦與 Qiskit 學習資源
+date: 2025-12-18
+reading_time: 15 min read
+tags: [quantum computing, Qiskit]
+excerpt: 
+---
 
-## 介紹
-本 README 彙整量子電腦基礎知識與 Qiskit 開源框架的學習資料，適合初學者從理論到實作逐步進階。資源以中文為主，涵蓋線上課程、教科書、教程與 GitHub 專案。[[[1](https://hackmd.io/@sqcs/HkMm1lCiT)]][[4](https://clay-atlas.com/qiskit-study-note/)]
+本文彙整量子電腦基礎知識與 Qiskit 開源框架的學習資料，適合初學者從理論到實作逐步進階。資源以中文為主，涵蓋線上課程、教科書、教程與 GitHub 專案。[[[1](https://hackmd.io/@sqcs/HkMm1lCiT)]][[4](https://clay-atlas.com/qiskit-study-note/)]
 
 ## 入門資源
 - **Qiskit Textbook**：IBM 官方線上平台，從量子原理到演算法編程，實作導向，適合所有程度學習者（目前更新中）。[[1](https://hackmd.io/@sqcs/HkMm1lCiT)]
