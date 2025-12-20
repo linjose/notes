@@ -1,6 +1,11 @@
-# Quantum Computing: Current Applications and Future Outlook
-
-## 📌 Overview
+---
+layout: post
+title: 量子電腦的應用
+date: 2025-12-20
+reading_time: 20 min read
+tags: [quantum computing]
+excerpt: 
+---
 
 量子電腦（Quantum Computer）被視為下一世代關鍵運算技術，特別適合解決傳統電腦在以下領域難以有效處理的問題：
 
