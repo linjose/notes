@@ -2,7 +2,7 @@
 layout: post
 title: 量子電腦與 Qiskit 學習資源
 date: 2025-12-18
-reading_time: 15 min read
+reading_time: 10 min read
 tags: [quantum computing, Qiskit]
 excerpt: 
 ---
