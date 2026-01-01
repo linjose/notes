@@ -111,3 +111,121 @@ results = db.similarity_search("如何優化資料庫？", k=3)
 ### 4. 向量量化 (Quantization)
 
 使用 `pgvector` 的向量壓縮技術（如 Scalar Quantization），將浮點數壓縮為整數，可減少高達 75% 的存儲空間並大幅提升檢索速度。
+
+
+
+---
+
+若將 RAG 的**索引（Index）**與**內容（Content）**全部整合在 PostgreSQL 是一個非常明智的選擇，這種做法被稱為 **「單體式向量資料庫」（Monolithic Vector Database）**。
+
+在這種架構下，建議採用以下**「三層結構」**的搭配方式，以確保系統在擴展時仍能保持高效能：
+
+---
+
+## 1. 資料表結構設計：Metadata-First
+
+不要只存 `content` 和 `embedding`。為了後續的過濾與管理，建議採用以下結構：
+
+```sql
+CREATE TABLE rag_docs (
+    id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+    collection_id text,           -- 用於區分不同客戶或專案 (Multi-tenancy)
+    content text NOT NULL,        -- 存儲原始切片文本
+    metadata jsonb,               -- 存儲來源、頁碼、標題、建立日期
+    embedding vector(1536),       -- 向量數據
+    fts_tokens tsvector           -- 全文檢索欄位 (優化必備)
+);
+
+```
+
+---
+
+## 2. 索引搭配策略：雙管齊下
+
+這是優化的核心。PostgreSQL 的強大在於它可以同時對三種維度建立索引：
+
+### A. 向量索引 (Vector Index)
+
+* **建議選用 HNSW**：對於 RAG 場景，查詢速度（Latency）通常比建立索引的速度更重要。
+* **配置建議**：
+```sql
+CREATE INDEX ON rag_docs 
+USING hnsw (embedding vector_cosine_ops) 
+WITH (m = 16, ef_construction = 64);
+
+```
+
+
+
+### B. 全文檢索索引 (Full-Text Search)
+
+* **必要性**：向量搜尋有時會漏掉「特定專有名詞」或「產品型號」。
+* **優化**：利用 GIN 索引加速關鍵字搜尋。
+```sql
+CREATE INDEX idx_fts ON rag_docs USING GIN (to_tsvector('chinese', content));
+
+```
+
+
+
+### C. 過濾索引 (Filtering Index)
+
+* 如果你的 RAG 經常需要過濾特定用戶或類別，務必對 `metadata` 的關鍵欄位建立索引，這能避免「先檢索向量、後過濾資料」導致的效能崩潰。
+
+---
+
+## 3. 查詢架構建議：混合檢索 (Hybrid Search)
+
+在一個純 PostgreSQL 的環境中，最推薦的搭配是使用 **RRF (Reciprocal Rank Fusion)** 來合併向量搜尋與全文檢索的結果。
+
+這種搭配方式能顯著提升 RAG 的準確度：
+
+```sql
+WITH vector_search AS (
+    SELECT id, row_number() OVER (ORDER BY embedding <=> $1) as rank
+    FROM rag_docs
+    LIMIT 20
+),
+text_search AS (
+    SELECT id, row_number() OVER (ORDER BY ts_rank_cd(fts_tokens, query) DESC) as rank
+    FROM rag_docs
+    WHERE fts_tokens @@ query
+    LIMIT 20
+)
+SELECT r.content, r.metadata
+FROM rag_docs r
+JOIN (
+    SELECT COALESCE(v.id, t.id) as id,
+           (1.0 / (60 + v.rank) + 1.0 / (60 + t.rank)) as score
+    FROM vector_search v
+    FULL OUTER JOIN text_search t ON v.id = t.id
+) combined ON r.id = combined.id
+ORDER BY combined.score DESC;
+
+```
+
+---
+
+## 4. 儲存優化建議
+
+* **TOAST 策略**：PostgreSQL 會將長文本（Content）存放在 TOAST 表中。如果你的內容非常大，讀取速度會變慢。
+* *優化方法*：將 `embedding` 與 `content` 放在同一個表，但如果頻繁更新 Embedding，建議將向量單獨拆到一個副表，減少主表的寫入放大。
+
+
+* **記憶體管理**：
+* **HNSW 索引必須盡可能常駐記憶體（RAM）**。如果你的伺服器記憶體小於向量索引的大小，查詢效能會出現斷崖式下跌。請確保 `shared_buffers` 足夠大。
+
+
+
+---
+
+## 5. 優缺點總結表
+
+| 組件 | 搭配建議 | 目的 |
+| --- | --- | --- |
+| **向量運算** | `pgvector` (HNSW) | 處理語義相似度，回傳「意思相近」的內容 |
+| **傳統搜尋** | `tsvector` + GIN 索引 | 處理精確匹配（型號、人名、代碼） |
+| **元數據** | `jsonb` + GIN 索引 | 實現動態過濾（例如：只搜尋 2024 年的文檔） |
+| **架構優勢** | 單一資料庫 ACID 保證 | 確保文檔刪除時，索引與向量同步刪除，不會有殘留 |
+
+
