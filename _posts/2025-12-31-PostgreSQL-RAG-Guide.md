@@ -1,4 +1,11 @@
-# 使用 PostgreSQL 搭建 RAG 系統全攻略
+---
+layout: post
+title: 用 PostgreSQL 搭建 RAG 
+date: 2025-12-31
+reading_time: 25 min read
+tags: [PostgreSQL, RAG]
+excerpt: 
+---
 
 這份指南將帶領你從基礎架構搭建到進階效能優化，利用 PostgreSQL 與 `pgvector` 打造高效能的檢索增強生成（RAG）系統。
 
