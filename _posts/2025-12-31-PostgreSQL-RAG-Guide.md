@@ -168,12 +168,17 @@ WITH (m = 16, ef_construction = 64);
 
 * **必要性**：向量搜尋有時會漏掉「特定專有名詞」或「產品型號」。
 * **優化**：利用 GIN 索引加速關鍵字搜尋。
-```sql
-CREATE INDEX idx_fts ON rag_docs USING GIN (to_tsvector('chinese', content));
-
+PostgreSQL 沒有內建 chinese text search config。
+方案 A：zhparser
 ```
-
-
+CREATE EXTENSION zhparser;
+CREATE TEXT SEARCH CONFIGURATION chinese (PARSER = zhparser);
+CREATE INDEX idx_fts ON rag_docs USING GIN (to_tsvector('chinese', content));
+```
+方案 B：jieba（第三方）
+```sql
+# 改天再補
+```
 
 ### C. 過濾索引 (Filtering Index)
 
