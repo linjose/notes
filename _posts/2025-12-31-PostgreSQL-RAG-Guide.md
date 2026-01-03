@@ -170,7 +170,7 @@ WITH (m = 16, ef_construction = 64);
 * **優化**：利用 GIN 索引加速關鍵字搜尋。
 PostgreSQL 沒有內建 chinese text search config。
 方案 A：zhparser
-```
+```sql
 CREATE EXTENSION zhparser;
 CREATE TEXT SEARCH CONFIGURATION chinese (PARSER = zhparser);
 CREATE INDEX idx_fts ON rag_docs USING GIN (to_tsvector('chinese', content));
