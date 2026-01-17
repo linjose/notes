@@ -1,3 +1,13 @@
+---
+layout: post
+title: 台灣數位化健身設備品牌
+date: 2026-01-14
+reading_time: 8 min read
+tags: [digital,sports,exercises]
+excerpt: 
+---
+
+
 以下列出 20 間「量測、阻力、遊戲」相關廠商與品牌，涵蓋 AIoT 整合商，以及可以作為硬體搭配的製造商：
 
 ### 1. 核心整合商 (具備軟硬體整合與數據後台)
