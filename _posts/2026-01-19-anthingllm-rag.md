@@ -1,3 +1,12 @@
+---
+layout: post
+title: AnythingLLM
+date: 2026-01-19
+reading_time: 8 min read
+tags: [AI, RAG]
+excerpt: 
+---
+
 這份指南是使用 **AnythingLLM** 打造一個既能檢索文件、又能處理圖片的 **RAG（檢索增強生成）** 系統。
 
 ---
