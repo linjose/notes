@@ -1,3 +1,13 @@
+---
+layout: post
+title: mobile webml
+date: 2026-01-29
+reading_time: 5 min read
+tags: [AI]
+excerpt: 
+---
+
+
 開發一個在 iPhone 上透過瀏覽器（Safari）運行的影像辨識 Web App，目前的技術路徑已經非常成熟。
 這類應用通常被稱為 **Web ML (Web Machine Learning)** 或 **PWA (Progressive Web App)**。
 
