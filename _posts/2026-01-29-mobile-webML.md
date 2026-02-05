@@ -145,3 +145,89 @@ iPhone 在產線當辨識器時，會遇到以下實際問題：
 ## 5. 進階：物件偵測 (Object Detection)
 
 如果是要「圈出哪個零件裝錯」，需要改用 **VoTT (Video Object Tagging Tool)** 標註方框，並訓練 **YOLOv8** 或 **SSD** 模型。這類模型也可以轉換為 `tfjs` 格式在 iPhone 上運作。
+
+# 少樣本學習
+
+若是要在 3-5 張影像內完成訓練並達到可用的品管精度，需透過 **「少樣本學習」(Few-Shot Learning)** 或 **「遷移學習」(Transfer Learning)**。
+
+在 Web 端（iPhone）實作這個需求，最快且最有效的做法是使用 **「特徵向量比對」(Feature Extraction + K-NN)**。
+
+---
+
+## 1. 核心邏輯：把 AI 當成「指紋辨識」
+
+不要讓 AI 去「理解」什麼是瑕疵，而是讓 AI 提取影像的「特徵點」。
+
+1. **提取特徵：** 使用預訓練好的強大模型（如 MobileNet），去掉最後的分類層，只拿它對影像的描述（一串數字，即 Feature Vector）。
+2. **存入範本：** 你拍 3 張良品的照片，瀏覽器會記住這 3 組數字。
+3. **即時比對：** 產線檢測時，計算當前影像與這 3 組數字的「歐幾里得距離」。如果距離太遠，就判定為「錯誤/不良品」。
+
+---
+
+## 2. 快速開發步驟
+
+### 第一步：選擇工具
+
+使用 **TensorFlow.js** 配合 **KNN Classifier** 插件。這是專門為「快速訓練」設計的。
+
+### 第二步：建立訓練介面 (Web UI)
+
+設計一個簡單的網頁，按鈕包含：
+
+* **[按鈕：存入良品範本]**：點擊後抓取當前畫面，提取特徵並儲存。
+* **[閾值拉桿 (Threshold)]**：用來調整「多不像才算錯誤」。
+
+### 第三步：數據訓練實作
+
+你不需要上傳到雲端，直接在 iPhone 的瀏覽器記憶體裡完成：
+
+```javascript
+// 1. 加載模型 (特徵提取器)
+const net = await mobilenet.load();
+const classifier = knnClassifier.create();
+
+// 2. 快速訓練 (按一下存一張，3-5張即可)
+async function addExample(classId) {
+  const img = tf.browser.fromPixels(videoElement);
+  const activation = net.infer(img, true); // 提取特徵 (不分類)
+  classifier.addExample(activation, classId); // 存入分類 (0:良品)
+  img.dispose();
+}
+
+// 3. 即時品管監控
+async function predict() {
+  if (classifier.getNumClasses() > 0) {
+    const img = tf.browser.fromPixels(videoElement);
+    const activation = net.infer(img, true);
+    const result = await classifier.predictClass(activation);
+    
+    // 如果信心值太低，或距離太遠，觸發警告
+    if (result.confidences[0] < 0.85) { 
+        console.log("警告：檢測到異常！");
+    }
+  }
+}
+
+```
+
+---
+
+## 3. 提高 3-5 張照片成功率的關鍵技巧
+
+由於樣本極少，為了防止 iPhone 誤判，建議在硬體環境上做以下限制：
+
+1. **環境對齊 (Alignment Guide)**：
+在網頁畫面上畫一個 **「透明框」**。要求品檢員必須把產品對齊這個框框才能按下訓練。這能大幅減少位移帶來的雜訊。
+2. **負樣本 (Negative Samples) 的重要性**：
+雖然你只想抓「良品」，但建議至少拍 1-2 張 **「空台」**（產線上什麼都沒放）的照片作為 Class B。這能防止 AI 把空台誤認成良品。
+3. **色彩直方圖輔助**：
+公分等級的品管（如零件顏色不對、漏裝黑墊片），可以加上簡單的顏色佔比分析。
+
+---
+
+## 4. 這種做法的優缺點
+
+| 優點 | 缺點 |
+| --- | --- |
+| **極速部署**：不需要後台伺服器，手機開了即測。 | **環境敏感**：如果光線變了，可能需要重新點擊 3 張訓練。 |
+| **隱私安全**：所有照片都在手機內處理，不傳上雲端。 | **無深度解釋**：它只能告訴你「不像」，不能告訴你「哪裡壞」。 |
