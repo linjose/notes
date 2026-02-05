@@ -2,7 +2,7 @@
 layout: post
 title: Mobile WebML
 date: 2026-01-29
-reading_time: 5 min read
+reading_time: 15 min read
 tags: [AI]
 excerpt: 
 ---
