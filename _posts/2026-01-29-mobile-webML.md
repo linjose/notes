@@ -231,3 +231,85 @@ async function predict() {
 | --- | --- |
 | **極速部署**：不需要後台伺服器，手機開了即測。 | **環境敏感**：如果光線變了，可能需要重新點擊 3 張訓練。 |
 | **隱私安全**：所有照片都在手機內處理，不傳上雲端。 | **無深度解釋**：它只能告訴你「不像」，不能告訴你「哪裡壞」。 |
+
+
+# 運動行為辨識
+
+如投籃姿勢是**連續性的動作**，單純靠幾張照片的特徵比對效果很差。
+
+針對 iPhone 上的 Web App，目前最主流且強大的方案是使用 **MediaPipe Pose**。它能即時抓取人體的 33 個骨骼關鍵點（Landmarks），並將其轉換為座標數據。
+
+---
+
+## 1. 核心邏輯：從「像素」轉向「骨架」
+
+要做到 3-5 次就能訓練，我們不再訓練「影像」，而是訓練**「角度數據」**。
+
+1. **關鍵點抓取：** 使用 MediaPipe 抓取肩膀、手肘、手腕的  座標。
+2. **角度計算：** 將座標轉換為關節角度（例如手肘彎曲度）。這能解決「距離遠近」或「衣服顏色」造成的誤判。
+3. **動態比對 (DTW)：** 運動是一個序列。你可以錄製 3 次標準投籃，系統會紀錄這幾秒內角度變化的「曲線」，當使用者投籃時，比對曲線的相似度。
+
+---
+
+## 2. 開發步驟與架構
+
+### 第一步：環境架構
+
+* **前端框架：** MediaPipe Pose (JavaScript 版)。
+* **運算核心：** 使用 iPhone 的 WebGL 加速。
+* **邏輯處理：** 監測特定關節的觸發（例如手腕高過頭部時開始記錄）。
+
+### 第二步：快速訓練的做法 (少樣本學習)
+
+針對投籃，你可以設定幾個「關鍵幀 (Keyframes)」：
+
+1. **持球期 (Set Point)：** 手肘角度、球的位置。
+2. **出手期 (Release)：** 手臂伸展程度、手腕壓低動作。
+3. **隨球動作 (Follow Through)：** 手臂是否保持直立。
+
+你只需要錄製 3 次正確示範，系統紀錄這些關鍵點的**相對角度範圍**，即可作為品管標竿。
+
+---
+
+## 3. 實作代碼思路 (MediaPipe)
+
+在瀏覽器中，核心偵測代碼會像這樣：
+
+```javascript
+const pose = new Pose({locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/pose/${file}`});
+
+pose.onResults((results) => {
+  if (results.poseLandmarks) {
+    // 取得手肘與肩膀座標
+    const elbow = results.poseLandmarks[14]; 
+    const shoulder = results.poseLandmarks[12];
+    const wrist = results.poseLandmarks[16];
+
+    // 計算角度 (使用餘弦定理)
+    const angle = calculateAngle(shoulder, elbow, wrist);
+    
+    // 與你那 3-5 次訓練的平均值做比對
+    if (Math.abs(angle - targetAngle) < 15) {
+      console.log("姿勢正確");
+    } else {
+      console.log("手肘太開了！");
+    }
+  }
+});
+
+```
+
+---
+
+## 4. 為什麼這比影像辨識更適合「快速訓練」？
+
+* **抗干擾強：** 不管你在室內還是室外球場，骨架抓取只看人體結構，背景不影響。
+* **數據量極小：** 存儲 5 次投籃的「角度曲線」只需要幾 KB，不需要處理龐大的影像訓練集。
+* **即時回饋：** iPhone 的處理器足以在 Web 介面上達到 30 FPS 的實時骨架追蹤。
+
+---
+
+## 5. 開發建議與挑戰
+
+* **iPhone 的 Safari 限制：** 務必使用 `requestAnimationFrame` 來驅動偵測，並確保攝像頭 API 呼叫時有處理 `facingMode: "environment"` (後鏡頭) 或 `"user"` (自拍鏡頭)。
+* **距離問題：** 投籃姿勢需要全身或上半身入鏡，Web 介面需設計一個「人形虛線框」，引導使用者站在正確距離。
