@@ -2,9 +2,10 @@
 layout: post
 title: AnythingLLM
 date: 2026-01-19
-reading_time: 8 min read
+reading_time: 20 min read
 tags: [AI, RAG]
 excerpt: 
+update: 2026-02-12
 ---
 
 這份指南是使用 **AnythingLLM** 打造一個既能檢索文件、又能處理圖片的 **RAG（檢索增強生成）** 系統。
@@ -74,3 +75,175 @@ AnythingLLM 是一款全能型的私有知識庫解決方案，它將大語言�
 
 * **引用溯源 (Citations)：** 每次回答後點擊引用，確認 AI 是參考了哪一頁、哪張圖，確保正確性。
 * **相似度閾值 (Similarity Threshold)：** 若覺得 AI 找得不夠準，可調高此數值，過濾掉關聯性低的資料。
+
+---
+
+# AnythingLLM 加速 
+
+AnythingLLM（本質上是 RAG：Retrieval-Augmented Generation 架構）**查詢速度慢通常不是「模型推理」本身，而是「向量搜尋 + 檢索流程」造成的**。可以從以下幾個面向優化：
+
+---
+
+## 🔎 一、優化向量資料庫（最有效）
+
+AnythingLLM 常搭配：
+
+* Chroma
+* LanceDB
+* Qdrant
+* Weaviate
+* Milvus
+
+### ✅ 1️⃣ 換成高效能向量資料庫
+
+如果你現在用：
+
+* **Chroma（本地 SQLite）** → 可考慮改成 **Qdrant 或 Milvus**
+* 本地單機 → 可考慮改成獨立向量 DB server
+
+👉 Qdrant 在大資料量下通常會更快
+
+---
+
+### ✅ 2️⃣ 啟用 HNSW 索引（如果支援）
+
+高效能向量 DB 都支援 HNSW（近似最近鄰搜尋）：
+
+優化參數：
+
+* `ef_search`（越高越準確但越慢）
+* `M`（索引圖的連接數）
+
+📌 建議：
+
+* 把 ef_search 調低（例如 64 → 32）
+* 如果資料很多，可稍微降低準確度換速度
+
+---
+
+### ✅ 3️⃣ 減少向量維度
+
+如果是用：
+
+* 1536 維（OpenAI embedding）
+* 3072 維
+
+可以改成：
+
+* 384 維（例如 `all-MiniLM-L6-v2`）
+* 768 維
+
+👉 維度越小，搜尋越快，記憶體也更省
+
+---
+
+## 📦 二、優化文件切分（Chunking）
+
+很多人忽略這點，其實影響很大。
+
+### ❌ 不好的做法
+
+* chunk 太小（例如 100 tokens）
+* chunk 太多（幾十萬筆）
+
+### ✅ 建議
+
+* 500–1000 tokens / chunk
+* overlap 100–150
+
+👉 減少 chunk 數量 = 減少搜尋筆數 = 速度提升
+
+---
+
+## ⚡ 三、降低 Top-K
+
+如果現在設定為：
+
+```
+Top K = 10
+```
+
+試著改成：
+
+```
+Top K = 3 或 5
+```
+
+👉 搜尋 + rerank 都會變快
+
+很多情況 K=3 已經足夠。
+
+---
+
+## 🧠 四、關閉或優化 Reranker
+
+如果有啟用：
+
+* Cross-encoder reranker
+* ColBERT
+
+👉 這會很慢
+
+可以：
+
+* 關掉 reranker
+* 或降低 rerank 數量
+
+---
+
+## 🖥 五、模型推理優化（如果是本地 LLM）
+
+如果用 Ollama / LM Studio：
+
+### ✅ 1️⃣ 使用較小模型
+
+* 13B → 改 7B
+* 7B → 改 4B
+
+### ✅ 2️⃣ 使用量化版本
+
+* Q4_K_M
+* Q5_K_M
+
+### ✅ 3️⃣ GPU 推理
+
+* CPU → 慢很多
+* GPU → 快 5~10 倍
+
+---
+
+## 🚀 六、開啟快取（Cache）
+
+AnythingLLM 支援：
+
+* Embedding cache
+* Response cache
+
+👉 常問問題會直接回傳，不會重新查詢
+
+---
+
+## 📊 七、資料量級別對應優化建議
+
+| 文件量            | 建議做法            |
+| -------------- | --------------- |
+| < 5,000 chunks | 基本不用優化          |
+| 5,000–50,000   | 調整 chunk + 降 K  |
+| 50,000–500,000 | 換 Qdrant + HNSW |
+| > 500,000      | 專用向量 DB + 分區索引  |
+
+---
+
+## 🎯 實戰最快優化順序（推薦）
+
+如果覺得慢，請照這順序試：
+
+1. 把 Top-K 改成 3
+2. 關 reranker
+3. chunk size 改 800
+4. 改用 Qdrant
+5. embedding 換 384 維模型
+
+通常能快 2～10 倍。
+
+
