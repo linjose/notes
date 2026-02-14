@@ -119,12 +119,3 @@ which opencode
 
 如果沒顯示路徑，代表 `opencode` 本體還沒安裝。
 
----
-
-如果你可以告訴我：
-
-* 你的作業系統（macOS / Linux / Windows）
-* 你用 bash 還是 zsh？
-* 你現在遇到什麼錯誤？
-
-我可以給你更精準的安裝與設定步驟 👌
