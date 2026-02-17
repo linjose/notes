@@ -2,7 +2,7 @@
 layout: post
 title: oh-my-opencode
 date: 2026-02-14
-reading_time: 10 min read
+reading_time: 15 min read
 tags: [AI]
 excerpt: 
 ---
