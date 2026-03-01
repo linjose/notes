@@ -1,3 +1,12 @@
+---
+layout: post
+title: OpenClaw + PostgreSQL
+date: 2026-03-01
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
+
 截至 2026 年初，**OpenClaw**（前身為 Clawdbot/Moltbot）作為目前最熱門的開源 AI Agent 框架之一，已經有數種成熟的 **PostgreSQL** 整合方案。
 
 由於 OpenClaw 的設計理念是「讓 AI 真正執行任務」，它與 PostgreSQL 的結合主要分為 **「讓資料庫具備 AI 能力」** 以及 **「將資料庫作為 AI 的長期記憶層」** 兩個維度：
