@@ -1,3 +1,12 @@
+---
+layout: post
+title: OpenClaw 相關研究
+date: 2026-03-05
+reading_time: 12 min read
+tags: [AI]
+excerpt: 
+---
+
 在 2026 年初，**OpenClaw** 不僅在開源社群爆紅，在學術與技術研究領域也引發了大量的探討。由於其「在地化優先（Local-first）」與「高度自主性」的特性，相關研究主要集中在 **去中心化架構**、**安全性漏洞分析** 以及 **Agent 社交行為觀察**。
 
 以下是目前學術界與技術研究中與 OpenClaw 相關的熱門論文與議題：
