@@ -3,7 +3,7 @@ layout: post
 title: Proxmox VE 9.0 installation
 date: 2026-03-05
 reading_time: 12 min read
-tags: [AI]
+tags: [cloud]
 excerpt: 
 ---
 ### 嵌套虛擬化 (Nested Hypervisor) — 在 Ubuntu 24.04 中安裝 Proxmox VE 9.0
