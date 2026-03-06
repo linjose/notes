@@ -1,6 +1,12 @@
-# 在 Ubuntu 24.04 中安裝 Proxmox VE 9.0
-
-### 什麼是嵌套虛擬化 (Nested Hypervisor) — 為什麼要用它來測試 Proxmox VE？
+---
+layout: post
+title: Proxmox VE 9.0 installation
+date: 2026-03-05
+reading_time: 12 min read
+tags: [AI]
+excerpt: 
+---
+### 嵌套虛擬化 (Nested Hypervisor) — 在 Ubuntu 24.04 中安裝 Proxmox VE 9.0
 
 嵌套虛擬化是一種虛擬化設置，即在一個虛擬機器監控器（Hypervisor）內部運行另一個虛擬機器監控器。簡單來說，就是「虛擬化中的虛擬化」。
 
