@@ -8,6 +8,7 @@ excerpt:
 ---
 
 使用 **OpenClaw** 基於 Python 的開源棒球數據抓取工具，如開發者為對接 Statcast/Savant 數據的工具。並將其轉換為 **TrackMan** 標準格式，核心在於「**欄位映射 (Mapping)**」與「**單位轉換**」。
+
 ---
 
 ## 核心流程架構
