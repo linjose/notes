@@ -1,4 +1,11 @@
-
+---
+layout: post
+title: VLM VLA
+date: 2026-03-13
+reading_time: 15 min read
+tags: [AI, openclaw]
+excerpt: 
+---
 
 
 下面是一套 **方案 C：Host 提供 LLM Server，VM 跑 OpenClaw Agent** 的完整架構與安裝流程。
