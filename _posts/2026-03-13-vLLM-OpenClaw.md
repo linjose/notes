@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VLM VLA
+title: vLLM & openclaw
 date: 2026-03-13
 reading_time: 15 min read
 tags: [AI, openclaw]
