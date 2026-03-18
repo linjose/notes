@@ -1,3 +1,13 @@
+---
+layout: post
+title: licenses of AI models 
+date: 2026-03-16
+reading_time: 15 min read
+tags: [AI, licenses]
+excerpt: 
+---
+
+
 簡單說：**Hugging Face 上的模型本身沒有統一授權**，每個模型都有自己的 license，所以**商業使用限制差異很大**。目前主流模型大致可以分成幾類授權模式。
 
 整理在 Hugging Face 上最常遇到的幾種情況👇
