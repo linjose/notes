@@ -325,3 +325,157 @@ Backend:
 Pipeline:
   JSON → Image → HTML → PDF
 ```
+
+# OpenClaw call AnythingLLM API
+
+---
+
+要讓 **OpenClaw** 呼叫 **AnythingLLM** 的 API，就是把 AnythingLLM 當成一個「後端推理服務」，在 OpenClaw 裡用 HTTP 請求去打它的 endpoint。
+
+---
+
+## 🧠 一、先確認 AnythingLLM API 已開啟
+
+AnythingLLM 預設就有 API（通常在本機）
+
+### 常見 API base URL：
+
+```
+http://localhost:3001/api/v1
+```
+
+### 你需要準備：
+
+* API Key（在 AnythingLLM 設定頁）
+* Workspace slug（例如：`my-workspace`）
+
+---
+
+## 🔌 二、AnythingLLM 最常用 API（聊天）
+
+### 📌 Chat Endpoint：
+
+```
+POST /workspace/{workspaceSlug}/chat
+```
+
+### 📦 Request 範例：
+
+```json
+{
+  "message": "幫我總結這段內容",
+  "mode": "chat"
+}
+```
+
+### 🔐 Header：
+
+```http
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+```
+
+---
+
+## ⚙️ 三、在 OpenClaw 裡怎麼接
+
+OpenClaw 通常用「HTTP Node / API Node」來串接👇
+
+### ✅ 基本設定
+
+#### 1️⃣ 設定 URL
+
+```
+http://localhost:3001/api/v1/workspace/my-workspace/chat
+```
+
+#### 2️⃣ Method
+
+```
+POST
+```
+
+#### 3️⃣ Headers
+
+```json
+{
+  "Authorization": "Bearer YOUR_API_KEY",
+  "Content-Type": "application/json"
+}
+```
+
+#### 4️⃣ Body
+
+```json
+{
+  "message": "{{input}}",
+  "mode": "chat"
+}
+```
+
+👉 `{{input}}` 可以接 OpenClaw 前面節點的輸入
+
+---
+
+## 🔄 四、回傳資料格式（解析）
+
+AnythingLLM 回來通常長這樣：
+
+```json
+{
+  "textResponse": "這是模型回答..."
+}
+```
+
+👉 在 OpenClaw 下一個節點取：
+
+```
+textResponse
+```
+
+---
+
+## 🧩 五、進階玩法（很重要）
+
+### ✅ 1. 使用 RAG（文件問答）
+
+AnythingLLM workspace 本身就有 knowledge base
+👉 只要用同一個 API 就會自動查文件
+
+---
+
+### ✅ 2. Streaming（如果 OpenClaw 支援）
+
+AnythingLLM 支援 stream（需開啟）
+
+---
+
+### ✅ 3. 多輪對話
+
+你可以自己在 OpenClaw 存 history：
+
+```json
+{
+  "message": "上一題 + 新問題",
+  "mode": "chat"
+}
+```
+
+或用：
+
+```
+mode: "query"
+```
+
+
+## 🧪 六、先用 curl 測試
+
+```bash
+curl http://localhost:3001/api/v1/workspace/my-workspace/chat \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "你好",
+    "mode": "chat"
+  }'
+```
