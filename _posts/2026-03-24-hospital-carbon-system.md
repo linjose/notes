@@ -1,3 +1,12 @@
+---
+layout: post
+title: hospital carbon system
+date: 2026-03-24
+reading_time: 15 min read
+tags: [ESG]
+excerpt: 
+---
+
 醫院的碳排特性（如：麻醉氣體、醫療廢棄物處理、24小時空調與設備用電）有別於一般企業，因此系統必須在符合 ISO 14064 標準的前提下，具備高度的彈性與查證追溯能力。
 
 ---
