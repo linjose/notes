@@ -3,7 +3,7 @@ layout: post
 title: hospital carbon system
 date: 2026-03-24
 reading_time: 15 min read
-tags: [ESG]
+tags: [ESG, GHG]
 excerpt: 
 ---
 
