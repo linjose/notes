@@ -1,3 +1,13 @@
+---
+layout: post
+title: AI 指令的 Token 計算
+date: 2026-03-28
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
+
+
 「幫我找出昨天的會議紀錄並整理重點」 這樣一個指令會使用多少Token? 
 我們用實際 LLM（例如 OpenAI 的 GPT 類模型）常見的 token 計算方式拆解。
 ---
