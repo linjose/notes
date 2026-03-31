@@ -1,3 +1,12 @@
+---
+layout: post
+title: wikipedia mirror
+date: 2026-03-29
+reading_time: 10 min read
+tags: []
+excerpt: 
+---
+
 要把 Wikipedia 做成離線版本（mirror），其實有幾種常見方法，從「簡單下載閱讀」到「完整本地伺服器」都有。
 
 ---
