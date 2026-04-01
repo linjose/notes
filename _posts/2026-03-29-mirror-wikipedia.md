@@ -3,7 +3,7 @@ layout: post
 title: wikipedia mirror
 date: 2026-03-29
 reading_time: 10 min read
-tags: []
+tags: [wiki]
 excerpt: 
 ---
 
