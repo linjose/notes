@@ -1,3 +1,13 @@
+---
+layout: post
+title: 自動化操作
+date: 2026-04-02
+reading_time: 10 min read
+tags: [automatic]
+excerpt: 
+---
+
+
 自動化操作 UI（使用者介面）其實有很多方案，會依照你的使用場景（桌面、Web、手機）而不同。
 ---
 
