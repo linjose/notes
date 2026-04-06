@@ -1,3 +1,13 @@
+---
+layout: post
+title: Android 電子紙閱讀器適用 APP 
+date: 2026-04-04
+reading_time: 10 min read
+tags: [ebook, APP]
+excerpt: 
+---
+
+
 # Android 電子紙閱讀器適用 APP 
 
 使用 Android 開放式彩色電子紙閱讀器（如 BOOX、HyRead Gaze、Bigme），最大的優勢就是「**不被單一書城綁定**」，可以自由安裝各種 App，打造最適合自己的閱讀與工作環境。
