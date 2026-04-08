@@ -1,3 +1,13 @@
+---
+layout: post
+title: Sovereign AI
+date: 2026-04-07
+reading_time: 10 min read
+tags: [AI, Sovereign AI]
+excerpt: 
+---
+
+
 # **主權 AI 下的戰爭博弈：從人類保護原則到多極 AI 均衡的理論分析**
 
 ## 摘要（Abstract）
