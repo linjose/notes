@@ -1,0 +1,1 @@
+# AI-trends-research
