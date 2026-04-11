@@ -1,3 +1,12 @@
+---
+layout: post
+title: AI-trends-research
+date: 2026-04-09
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
+
 # AI-trends-research
 
 
