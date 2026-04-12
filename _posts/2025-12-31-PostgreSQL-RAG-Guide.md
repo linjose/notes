@@ -32,6 +32,7 @@ docker run -d \
 
 ```sql
 -- 1. 啟用向量擴充功能
+-- pgvector 套件在 PostgreSQL 中的 extension 名稱是 vector
 CREATE EXTENSION IF NOT EXISTS vector;
 
 -- 2. 建立文檔儲存表
@@ -43,6 +44,7 @@ CREATE TABLE documents (
 );
 
 -- 3. 建立 HNSW 索引以加速檢索
+-- （需 pgvector >= 0.5，PostgreSQL >= 14）
 CREATE INDEX ON documents USING hnsw (embedding vector_cosine_ops);
 
 ```
@@ -58,6 +60,7 @@ CREATE INDEX ON documents USING hnsw (embedding vector_cosine_ops);
 ### SQL 檢索範例
 
 ```sql
+-- 範例需替換為實際 embedding 向量 '[0.12, -0.05, 0.33, ...]'  -- 示意
 SELECT content, 1 - (embedding <=> '[0.12, -0.05, ...]') AS similarity
 FROM documents
 ORDER BY embedding <=> '[0.12, -0.05, ...]' 
@@ -68,7 +71,7 @@ LIMIT 5;
 ---
 
 ## 四、 Python 實作 (使用 LangChain)
-
+### 注意：LangChain API 版本變動頻繁，請確認版本相容性
 ```python
 from langchain_community.vectorstores import PGVector
 from langchain_openai import OpenAIEmbeddings
