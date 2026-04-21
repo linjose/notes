@@ -1,7 +1,12 @@
+---
+layout: post
+title: Qwen + Whisper + Piper + VTube = 本地語音 AI 虛擬人
+date: 2026-04-20
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
 # Qwen + Whisper + Piper + VTube = 本地語音 AI 虛擬人
-
-# 🧠 一、逐項檢查（是否純地端）
-
 ## 🎤 ASR：Whisper
 
 ✅ **完全可本地運行**
@@ -126,8 +131,6 @@ Ollama()
 ---
 
 ## 💡 完全離線最乾淨組合
-
-👉 我會這樣建：
 
 * ASR：Whisper (faster-whisper)
 * LLM：Qwen GGUF（llama.cpp 或 Ollama）
