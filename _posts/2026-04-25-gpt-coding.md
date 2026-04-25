@@ -1,3 +1,11 @@
+---
+layout: post
+title: GPT Coding
+date: 2026-04-25
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
 
 ## 🧠 1. GPT 是「輔助工程師」，不是自動寫完的工具
 
