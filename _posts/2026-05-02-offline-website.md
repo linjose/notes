@@ -1,3 +1,12 @@
+---
+layout: post
+title: 離線網路環境建置
+date: 2026-05-05
+reading_time: 10 min read
+tags: [Web for kids]
+excerpt: 
+---
+
 「可控、安全、教育導向的離線網路環境」，可以完全避開廣告、演算法、甚至不適合內容 👍
 整理**實際可行的架構 + 工具組合**，可以從簡單做到進階。
 
