@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 離線網路環境建置
-date: 2026-05-05
+date: 2026-05-02
 reading_time: 10 min read
 tags: [Web for kids]
 excerpt: 
