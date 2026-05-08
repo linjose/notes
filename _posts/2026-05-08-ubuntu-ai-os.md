@@ -1,3 +1,12 @@
+---
+layout: post
+title: Ubuntu AI OS
+date: 2026-05-08
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
+
 
 Ubuntu 26.04 LTS 沒有直接把自己命名成「AI OS」，但 Canonical 的方向已經非常明顯：
 
