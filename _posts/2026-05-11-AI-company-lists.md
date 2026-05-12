@@ -1,3 +1,12 @@
+---
+layout: post
+title: AI公司整理
+date: 2026-05-11
+reading_time: 5 min read
+tags: [AI]
+excerpt: 
+---
+
 整理目前國際上較具代表性的 AI 軟體大廠／平台公司。包含美國、歐洲、印度、中國等主要 AI 生態系。
 
 | 總公司所在國別 | 廠商名稱                  | AI服務內容                         | 公司網址                                                                 | 開源專案（代表性）                                      |
