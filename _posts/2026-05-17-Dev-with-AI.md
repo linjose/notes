@@ -1,3 +1,12 @@
+---
+layout: post
+title: AI 開發方法
+date: 2026-05-17
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
 近年來隨著大型語言模型（LLM）的推理能力提升，以及 Agentic Workflow（代理工作流）的成熟，AI 與軟體開發的協作已經從單純的「程式碼自動補全（Auto-complete）」，演進到「脈絡感知（Context-Aware）」**與**「自主代理（Autonomous Agents）」的深度結合。
 
 以下整理近期在業界與技術社群中，因 AI 發展而延伸出的核心軟體開發新模式：
