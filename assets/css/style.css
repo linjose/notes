@@ -1,0 +1,828 @@
+/* =========================================================
+   Medium-style Editorial Theme
+   Optimized for Traditional Chinese typography
+   ========================================================= */
+
+/* === Google Fonts 建議 ===
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+========================================================= */
+
+
+/* =========================================================
+   Root Variables
+========================================================= */
+
+:root {
+  --bg: #ffffff;
+
+  --text: #242424;
+  --muted: #6b6b6b;
+
+  --border: #ebebeb;
+
+  --accent: #1a8917;
+
+  --surface: #fafafa;
+
+  --max-width: 760px;
+  --wide-width: 1120px;
+
+  --font-serif: "Noto Serif TC", serif;
+  --font-sans: "Inter", "Noto Sans TC", sans-serif;
+
+  --shadow-sm:
+    0 1px 2px rgba(0,0,0,0.04);
+
+  --transition:
+    180ms ease;
+}
+
+
+/* =========================================================
+   Base
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font-family: var(--font-serif);
+
+  font-size: 20px;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.01em;
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   Layout
+========================================================= */
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+
+  padding:
+    56px
+    24px
+    120px;
+}
+
+
+/* =========================================================
+   Selection
+========================================================= */
+
+::selection {
+  background: rgba(26, 137, 23, 0.16);
+}
+
+
+/* =========================================================
+   Links
+========================================================= */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition),
+    opacity var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   Typography
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
+  color: var(--text);
+
+  font-family: var(--font-serif);
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin:
+    1.8rem
+    0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   Navbar
+========================================================= */
+
+header.site,
+.top-nav {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 64px;
+
+  padding:
+    0
+    32px;
+
+  background:
+    rgba(255,255,255,0.84);
+
+  backdrop-filter:
+    saturate(180%)
+    blur(14px);
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.brand,
+.top-nav .logo {
+  font-family: var(--font-sans);
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   Nav Right
+========================================================= */
+
+.nav-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   Search
+========================================================= */
+
+.search,
+.search-input {
+  width: 220px;
+
+  border: none;
+
+  outline: none;
+
+  background: #f5f5f5;
+
+  border-radius: 999px;
+
+  padding:
+    10px
+    16px;
+
+  color: var(--text);
+
+  font-family: var(--font-sans);
+
+  font-size: 0.92rem;
+
+  transition:
+    background var(--transition);
+}
+
+.search:focus,
+.search-input:focus {
+  background: #efefef;
+}
+
+
+/* =========================================================
+   Buttons
+========================================================= */
+
+.btn,
+.follow-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid var(--border);
+
+  background: transparent;
+
+  color: var(--text);
+
+  border-radius: 999px;
+
+  padding:
+    10px
+    16px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.92rem;
+
+  cursor: pointer;
+
+  transition:
+    all var(--transition);
+}
+
+.btn:hover,
+.follow-btn:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: white;
+}
+
+
+/* =========================================================
+   Hero / Cover
+========================================================= */
+
+.cover-banner {
+  margin:
+    2rem
+    0
+    4rem;
+}
+
+.cover-banner img {
+  width: 100%;
+
+  max-height: 460px;
+
+  object-fit: cover;
+
+  border-radius: 4px;
+}
+
+
+/* =========================================================
+   Post List
+========================================================= */
+
+.post-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   Post Card
+========================================================= */
+
+.card,
+.post-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    180px;
+
+  gap: 28px;
+
+  padding:
+    38px
+    0;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.post-card:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   Post Text
+========================================================= */
+
+.post-text {
+  min-width: 0;
+}
+
+.post-text h2,
+.card h2 {
+  margin:
+    0
+    0
+    0.8rem;
+
+  font-size: 1.6rem;
+
+  line-height: 1.35;
+}
+
+.post-text p {
+  margin:
+    0
+    0
+    1rem;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   Meta
+========================================================= */
+
+.article-meta,
+.post-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--muted);
+
+  font-family: var(--font-sans);
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   Post Thumbnail
+========================================================= */
+
+.post-card img {
+  width: 100%;
+
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 2px;
+
+  transition:
+    transform 300ms ease;
+}
+
+.post-card:hover img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   Tags
+========================================================= */
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 30px;
+
+  padding:
+    0
+    12px;
+
+  border-radius: 999px;
+
+  background: #f3f3f3;
+
+  color: #555;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.82rem;
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.tag:hover {
+  background: #eaeaea;
+}
+
+
+/* =========================================================
+   Article
+========================================================= */
+
+article.post {
+  margin-top: 2rem;
+}
+
+
+/* =========================================================
+   Post Content
+========================================================= */
+
+.post-content {
+  font-size: 1.15rem;
+}
+
+.post-content img {
+  width: 100%;
+
+  margin:
+    2.5rem
+    0;
+
+  border-radius: 4px;
+}
+
+.post-content p {
+  margin:
+    2rem
+    0;
+}
+
+
+/* =========================================================
+   Lists
+========================================================= */
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.4rem;
+
+  margin:
+    2rem
+    0;
+}
+
+.post-content li {
+  margin:
+    0.8rem
+    0;
+}
+
+
+/* =========================================================
+   Blockquote
+========================================================= */
+
+.post-content blockquote {
+  margin:
+    3rem
+    0;
+
+  padding-left: 1.5rem;
+
+  border-left:
+    3px solid var(--text);
+
+  color: #555;
+
+  font-size: 1.25rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   Code
+========================================================= */
+
+.post-content pre {
+  overflow-x: auto;
+
+  margin:
+    2.5rem
+    0;
+
+  padding:
+    1.25rem
+    1.4rem;
+
+  border-radius: 10px;
+
+  background: #f7f7f7;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+.post-content code {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+
+  font-size: 0.9em;
+}
+
+.post-content p code,
+.post-content li code {
+  background: #f3f3f3;
+
+  padding:
+    0.15em
+    0.45em;
+
+  border-radius: 6px;
+}
+
+
+/* =========================================================
+   Horizontal Rule
+========================================================= */
+
+hr {
+  border: none;
+
+  border-top:
+    1px solid var(--border);
+
+  margin:
+    4rem
+    0;
+}
+
+
+/* =========================================================
+   Tables
+========================================================= */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin:
+    2rem
+    0;
+
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding:
+    14px
+    12px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  text-align: left;
+}
+
+th {
+  font-family: var(--font-sans);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   Footer
+========================================================= */
+
+footer.site,
+.site-footer {
+  margin-top: 120px;
+
+  padding:
+    40px
+    24px;
+
+  border-top:
+    1px solid var(--border);
+
+  color: var(--muted);
+
+  text-align: center;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   Utility
+========================================================= */
+
+.hidden {
+  display: none;
+}
+
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 900px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .wrap {
+    padding:
+      40px
+      20px
+      80px;
+  }
+
+  .card,
+  .post-card {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .post-card img {
+    width: 100%;
+
+    height: 220px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .search,
+  .search-input {
+    display: none;
+  }
+
+  header.site,
+  .top-nav {
+    padding:
+      0
+      20px;
+  }
+}
+
+
+/* =========================================================
+   Dark Mode
+========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --bg: #121212;
+
+    --text: #f3f3f3;
+
+    --muted: #a8a8a8;
+
+    --border: #2a2a2a;
+
+    --surface: #1a1a1a;
+  }
+
+  body {
+    background: var(--bg);
+
+    color: var(--text);
+  }
+
+  header.site,
+  .top-nav {
+    background:
+      rgba(18,18,18,0.84);
+  }
+
+  .search,
+  .search-input {
+    background: #1e1e1e;
+
+    color: var(--text);
+  }
+
+  .search:focus,
+  .search-input:focus {
+    background: #252525;
+  }
+
+  .tag {
+    background: #1f1f1f;
+
+    color: #d5d5d5;
+  }
+
+  .tag:hover {
+    background: #2a2a2a;
+  }
+
+  .post-content pre {
+    background: #1d1d1d;
+  }
+
+  .post-content p code,
+  .post-content li code {
+    background: #1f1f1f;
+  }
+}
