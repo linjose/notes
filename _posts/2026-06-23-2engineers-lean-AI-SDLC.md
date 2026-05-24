@@ -1,3 +1,12 @@
+---
+layout: post
+title: 2-Engineers Lean AI SDLC
+date: 2026-05-23
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
 # 2-Engineers Lean AI SDLC
 
 ## 團隊編制與核心職責 (2.5 人編制)
