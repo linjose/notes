@@ -1,4 +1,11 @@
-# 本地端混合圖形檢索增強生成系統 (Local Hybrid Graph RAG)
+---
+layout: post
+title: 本地端混合圖形檢索增強生成系統 (Local Hybrid Graph RAG)
+date: 2026-05-26
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
 
 ## 建置與敏捷實作標準作業程序 (SOP)
 
