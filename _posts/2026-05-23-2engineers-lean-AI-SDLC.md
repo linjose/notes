@@ -7,8 +7,6 @@ tags: [AI]
 excerpt: 
 ---
 
-# 2-Engineers Lean AI SDLC
-
 ## 團隊編制與核心職責 (2.5 人編制)
 
 | 團隊成員 | 角色定位 | 核心職責 |
