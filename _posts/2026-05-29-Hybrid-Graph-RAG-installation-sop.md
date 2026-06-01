@@ -1,8 +1,13 @@
-以下整理為適用於 Ubuntu 26.04 的《Local Hybrid Graph RAG 安裝與建置 SOP》，已將原始內容工程化、命令化，並補充實際部署時容易踩坑的 Linux / CUDA / Python 環境問題。
-
+---
+layout: post
+title: 本地端 Hybrid Graph RAG 安裝 SOP（Ubuntu 26.04）
+date: 2026-05-29
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
 ---
 
-# 本地端 Hybrid Graph RAG 安裝 SOP（Ubuntu 26.04）
+以下整理為適用於 Ubuntu 26.04 的《Local Hybrid Graph RAG 安裝與建置 SOP》，已將原始內容工程化、命令化，並補充實際部署時容易踩坑的 Linux / CUDA / Python 環境問題。
 
 ## 適用環境
 
