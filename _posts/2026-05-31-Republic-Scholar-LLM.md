@@ -1,7 +1,10 @@
-# Republic Scholar LLM
-
-## 民國士大夫大型語言模型建置指南（Implementation Guide v0.1）
-
+---
+layout: post
+title: 士大夫大型語言模型建置指南
+date: 2026-05-29
+reading_time: 20 min read
+tags: [AI]
+excerpt: （Implementation Guide v0.1）
 ---
 
 # 1. 專案目標
