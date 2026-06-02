@@ -68,6 +68,8 @@ lspci | grep -i nvidia
 Ubuntu 26.04 通常可直接使用：
 
 ```bash
+sudo ubuntu-drivers list
+sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 ```
 
