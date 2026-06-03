@@ -72,6 +72,7 @@ sudo ubuntu-drivers list
 sudo ubuntu-drivers devices
 sudo ubuntu-drivers autoinstall
 ```
+- https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/driver/ubuntu-drivers.html
 
 重新開機：
 
