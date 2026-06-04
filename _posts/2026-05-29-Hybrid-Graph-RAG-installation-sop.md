@@ -68,8 +68,6 @@ lspci | grep -i nvidia
 Ubuntu 26.04 通常可直接使用：
 
 ```bash
-# sudo ubuntu-drivers list
-# sudo ubuntu-drivers devices
 sudo ubuntu-drivers install
 ```
 - https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/driver/ubuntu-drivers.html
