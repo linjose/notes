@@ -7,6 +7,10 @@ tags: [AI]
 excerpt: （Implementation Guide v0.1）
 ---
 
+ScholarLM is an open-source Chinese language model alignment project focused on intellectual traditions, cultural literacy, historical reasoning, and civilizational knowledge representation.
+
+The project explores how large language models can incorporate long-term cultural memory, educational values, ethical reasoning, and historical context through RAG, persona fine-tuning, and alignment techniques.
+
 # 1. 專案目標
 
 建立一個具備以下特徵的中文大型語言模型：
