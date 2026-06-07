@@ -90,7 +90,7 @@ nvidia-smi
 
 * RTX 4060
 * Driver Version
-* CUDA Version
+* CUDA Version : 13.2
 
 ---
 
