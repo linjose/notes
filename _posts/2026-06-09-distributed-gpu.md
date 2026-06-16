@@ -1,5 +1,11 @@
-
-## 分散式推論開源專案
+---
+layout: post
+title: 分散式推論開源專案
+date: 2026-06-09
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
 
 ### 1. Exo (`exo-explore/exo`)
 * **Exo：** https://exolabs.net/
