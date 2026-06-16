@@ -1,4 +1,13 @@
-Agentic AI 
+---
+layout: post
+title: Agentic AI 專案
+date: 2026-06-13
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
+
+
 
 依照目前的社群活躍度（包含 GitHub Stars、開發者討論熱度、產業實際落地率）進行梯隊排序整理如下。
 
