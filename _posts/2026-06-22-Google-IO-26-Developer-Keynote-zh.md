@@ -1,3 +1,14 @@
+---
+layout: post
+title: 2026 Google I/O Developer Keynote
+date: 2026-06-22
+reading_time: 30 min read
+tags: [AI]
+excerpt: 
+---
+
+http://www.youtube.com/watch?v=aqmpZocmR8o
+
 這部影片是 Google I/O '26 的 **Developer Keynote（開發者主題演講）** [[00:09](http://www.youtube.com/watch?v=aqmpZocmR8o&t=9)]，核心主題圍繞在 AI 模型的演進，以及如何從「AI 輔助（Assist）」邁向以「AI 代理（Agents）」為核心的全新開發生態系 [[01:15](http://www.youtube.com/watch?v=aqmpZocmR8o&t=75)]。
 
 以下是演講的重點摘要：
