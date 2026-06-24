@@ -1,3 +1,13 @@
+---
+layout: post
+title: 主流 LLM 比較
+date: 2026-06-24
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
+
+
 ## 四大主流 LLM 陣營
 
 * **OpenAI（GPT-5.2 系列）**：複雜推理與自主代理人（Agentic）能力的行業標竿。
