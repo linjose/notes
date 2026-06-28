@@ -1,4 +1,11 @@
-
+---
+layout: post
+title: AI 如何優化 ACID & CAP
+date: 2026-06-27
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
 
 ## 一、 AI 如何優化 ACID（提升交易效能與併發極限）
 
