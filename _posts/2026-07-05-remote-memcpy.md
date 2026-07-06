@@ -1,3 +1,13 @@
+---
+layout: post
+title: Remote Memcpy
+date: 2026-07-05
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
+
+ 
  **如何讓 Agent 在大型分散式系統中，以更低延遲取得資料、呼叫工具及管理記憶體**。
  
  許多研究開始把焦點放在 HPC（高效能運算）、RDMA、DPU、CXL、GPU Networking 等領域。
