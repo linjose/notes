@@ -123,10 +123,10 @@ systemctl status ollama
 
 ## 3.3 拉取模型
 
-推薦：
+建議 qwen3.5:9b (6.6GB) 或 qwen3:8b (5.2GB)
 
 ```bash
-ollama pull qwen2.5:7b
+ollama pull qwen3.5:9b
 ```
 
 或：
