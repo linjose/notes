@@ -140,7 +140,7 @@ ollama pull qwen3:8b
 ## 3.4 測試推論
 
 ```bash
-ollama run qwen2.5:7b
+ollama run qwen3.5:9b
 ```
 
 輸入：
