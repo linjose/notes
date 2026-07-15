@@ -1,3 +1,12 @@
+---
+layout: post
+title: LLM Model Modification
+date: 2026-07-09
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
+
 ## 實戰指南：如何透過數據蒸餾修改 Qwen3.5:9b 的知識
 
 因為 Qwen3.5:9b 採用了 **Gated Delta Network (GDN)** 混合架構（線性注意力與標準注意力混合），如果想直接做傳統的白盒機率分佈對齊（Logit Distillation），在不同架構間的數學對齊難度極高。因此，目前業界最推薦、最主流的做法是**數據蒸餾 + 監督式微調（SFT）**。
