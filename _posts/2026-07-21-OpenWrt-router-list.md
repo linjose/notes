@@ -1,3 +1,12 @@
+---
+layout: post
+title: OpenWrt
+date: 2026-07-21
+reading_time: 20 min read
+tags: [homelab]
+excerpt: 
+---
+
 以下整理的是 **目前 OpenWrt 24.x 系列支援的台灣三大品牌 ASUS、D-Link、Zyxel 路由器**。
 由於 OpenWrt 的支援名單會持續增加，以下以**一般消費者較常見**、且目前仍具有實際使用價值（避免列入 Flash/RAM 過小的古董機）的機型為主。
 完整名單可在 OpenWrt Table of Hardware 查詢。[OpenWrt Table of Hardware](https://toh.openwrt.org/?utm_source=chatgpt.com) ([OpenWrt][1])
