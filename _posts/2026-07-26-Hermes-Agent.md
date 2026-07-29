@@ -1,3 +1,12 @@
+---
+layout: post
+title: Hermes Agent
+date: 2026-07-26
+reading_time: 10 min read
+tags: [AI]
+excerpt: 
+---
+
 如果最近在研究 **OpenClaw、Claude Code、OpenHands、AutoGen、LangGraph** 等 AI Agent，那 **Hermes Agent** 絕對是 2026 年最值得深入了解的專案之一。
 
 它最大的特色只有一句話：
