@@ -1,3 +1,13 @@
+---
+layout: post
+title: 各國AI方案整理
+date: 2026-08-03
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
+
 截至 **2026 年 8 月**，各國家具代表性的**基礎模型、AI 公司、開源模型或國家級主權 AI **，包含分成以下幾個層次。
 
 例如 **法國 Mistral AI 是民營 AI 公司，不是法國政府專案**；但它已成為法國及歐洲 AI 能力的代表。
