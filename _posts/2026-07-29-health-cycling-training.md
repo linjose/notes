@@ -3,7 +3,7 @@ layout: post
 title: 多人健身車沉浸式互動系統技術方案
 date: 2026-07-29
 reading_time: 10 min read
-tags: [AI]
+tags: [sportec]
 excerpt: 
 ---
 
