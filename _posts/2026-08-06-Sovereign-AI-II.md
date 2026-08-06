@@ -1,4 +1,11 @@
-# Sovereign AI II
+---
+layout: post
+title: 主權式AI應用面
+date: 2026-08-03
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
 
 # 主權 AI 的真正價值：不是價值觀，而是基礎建設的自主控制
 
