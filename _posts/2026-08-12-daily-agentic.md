@@ -1,4 +1,13 @@
-# 建立日常生活的 Agentic AI：從 Personal Assistant 到 My Future Life Digital Twin
+---
+layout: post
+title: 日常使用 Agentic AI 工具 
+date: 2026-08-12
+reading_time: 30 min read
+tags: [AI]
+excerpt: 
+---
+
+從 Personal Assistant 到 My Future Life Digital Twin
 
 ## 1. 前言：Agentic AI 已經進入「生活代理人」階段
 
