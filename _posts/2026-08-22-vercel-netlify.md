@@ -1,3 +1,13 @@
+---
+layout: post
+title: Vercel 與 Netlify 比較
+date: 2026-08-22
+reading_time: 10 min read
+tags: [Cloud]
+excerpt: 
+---
+
+
 Vercel 與 Netlify 皆為現代前端與 JAMstack 託管平台的領航者，但在核心技術優化與生態系側重上有所不同。
 
 | 比較維度 | Vercel | Netlify |
