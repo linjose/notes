@@ -1,4 +1,11 @@
-# Hermes Agent 安裝步驟
+---
+layout: post
+title: Hermes Agent 安裝步驟
+date: 2026-08-30
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
 
 ## 一、環境需求
 
