@@ -1,4 +1,11 @@
-
+---
+layout: post
+title: HF 部署
+date: 2026-09-05
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
 
 ## 使用 Gradio 搭配 Hugging Face Spaces 部署一個免費的 AI Demo 應用
 
