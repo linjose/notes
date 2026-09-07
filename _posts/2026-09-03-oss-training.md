@@ -1,4 +1,11 @@
-# 開源軟體人才培育機制
+---
+layout: post
+title: 開源軟體人才培育機制
+date: 2026-09-03
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
 
 ## 一、培育目標
 
