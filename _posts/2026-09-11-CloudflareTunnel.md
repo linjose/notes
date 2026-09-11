@@ -1,3 +1,13 @@
+---
+layout: post
+title: 建立Cloudflare Tunnel 
+date: 2026-09-11
+reading_time: 40 min read
+tags: [Cloud]
+excerpt: 
+---
+
+
 # Ubuntu 26.04 使用 Cloudflare Tunnel 建立對外 Server 設定教學
 
 **適用環境：** Ubuntu 26.04、4G/LTE Router、CGNAT、Web Server / API Server
