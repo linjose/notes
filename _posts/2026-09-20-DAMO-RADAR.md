@@ -1,3 +1,13 @@
+---
+layout: post
+title: DAMO RADAR
+date: 2026-09-20
+reading_time: 15 min read
+tags: [AI]
+excerpt: 
+---
+
+
 **DAMO RADAR**（Rapid Abdominal Diagnosis with AI and Radiology）是由**阿里巴巴達摩院（DAMO Academy）**聯合**浙江大學醫學院附屬第一醫院**等機構共同研發的通用醫療影像大模型。該研究成果發表於《Science》正刊，並已在 GitHub 與 Hugging Face 完整開源權重與程式碼。
 
 ---
