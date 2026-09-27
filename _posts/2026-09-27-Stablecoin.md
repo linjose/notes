@@ -1,3 +1,12 @@
+---
+layout: post
+title: Stablecoin
+date: 2026-09-27
+reading_time: 20 min read
+tags: [Crypto]
+excerpt: 
+---
+
 穩定幣已經分成好幾個層次。
 
 **真正具有全球「民間美元」效果的，目前主要還是 USDT，其次是 USDC。** 
