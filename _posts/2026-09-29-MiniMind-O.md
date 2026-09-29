@@ -1,3 +1,11 @@
+---
+layout: post
+title: MiniMind-O
+date: 2026-09-29
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
 
 ## MiniMind-O
 **MiniMind-O 定位為「超小型、端到端、語音原生（speech-native）的 Omni 多模態模型」**。
