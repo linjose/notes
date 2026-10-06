@@ -1,3 +1,12 @@
+---
+layout: post
+title: Ceph / MinIO / Ozone
+date: 2026-10-01
+reading_time: 20 min read
+tags: [Cloud]
+excerpt: 
+---
+
 # Ceph / MinIO / Ozone
 
 「捨棄 MinIO 改用 Apache Ozone」的現象，主要源於 **MinIO 的商業授權策略轉嚴** 以及 Ozone 在**超大規模 S3 與大數據分析**領域的技術優勢。
