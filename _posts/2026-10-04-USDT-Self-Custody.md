@@ -1,3 +1,13 @@
+---
+layout: post
+title: USDT Self-Custody
+date: 2026-10-04
+reading_time: 20 min read
+tags: []
+excerpt: 
+---
+
+
 # 如何架設自己的 USDT 錢包
 
 以**自主管理（Self-Custody）錢包 + MetaMask + USDT**作為教學範例，並以 Ethereum/ERC-20 為主要示範。USDT 目前也存在於 Tron、Solana、TON、Avalanche、BNB Smart Chain、Celo、Kaia 等多個區塊鏈，因此「選對網路」是整個流程最重要的觀念之一。([Tether][1])
