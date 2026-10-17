@@ -1,3 +1,12 @@
+---
+layout: post
+title: AI Security
+date: 2026-10-16
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
 # 從被動防禦走向自主防禦：AI 時代資安技術的發展趨勢與四大關鍵方向
 
 **— 聚焦 AI SOC、AI Agent Security、AI Red Team 與 AI Supply Chain Security**
