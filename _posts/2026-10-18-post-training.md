@@ -1,3 +1,13 @@
+---
+layout: post
+title: 大型語言模型 Post-training
+date: 2026-10-18
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
+
 # 如何入門大型語言模型 Post-training：從監督式微調到強化學習的技術實踐
 
 ## 一、前言：為什麼 Post-training 成為大型語言模型發展的重要技術？
