@@ -1,3 +1,13 @@
+---
+layout: post
+title: 分散式AI
+date: 2026-10-22
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
+
 分散式 GPU 技術與開源生態系：架構、專案分層及整合方案
 一、前言
 隨著大型語言模型（Large Language Models, LLM）、多模態人工智慧及 AI Agent 應用快速發展，AI 系統的運算需求已從單一 GPU 的模型推論，逐步延伸至多 GPU、多伺服器及大型運算叢集的協同執行。
