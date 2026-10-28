@@ -1,3 +1,13 @@
+---
+layout: post
+title: Claude Duet
+date: 2026-10-26
+reading_time: 25 min read
+tags: [AI]
+excerpt: 
+---
+
+
 # Claude Duet：從對話式人工智慧邁向主動型 AI Agent 的新發展
 
 技術與產業發展專題｜2026 年 10 月
