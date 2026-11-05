@@ -1,3 +1,13 @@
+---
+layout: post
+title: 整理東協人工智慧（AI）研究單位
+date: 2026-11-04
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
+
 東南亞的人工智慧（AI）研究主要集中在國家級科技計畫、頂尖大學學術中心、跨國研發實驗室以及區域合作組織。
 
 ---
