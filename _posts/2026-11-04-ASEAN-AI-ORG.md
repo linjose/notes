@@ -45,29 +45,29 @@ excerpt:
 ### 二、 頂尖大學 AI 研究中心
 
 * **新加坡**
-* **NUS AI Institute (新加坡國立大學 AI 研究所)**：整合 NUS 跨學科 AI 研究，涵蓋機器學習理論、人機互動與健康醫療 AI。
-* **NTU Centre for AI in Medicine (CAIM, 南洋理工大學醫療 AI 中心)**：專注於醫療影像、基因數據分析與臨床輔助診斷。
-* **SMU School of Computing and Information Systems (新加坡管理大學)**：專注於軟體工程、商業智慧與 AI 法規／倫理研究。
+  * **NUS AI Institute (新加坡國立大學 AI 研究所)**：整合 NUS 跨學科 AI 研究，涵蓋機器學習理論、人機互動與健康醫療 AI。
+  * **NTU Centre for AI in Medicine (CAIM, 南洋理工大學醫療 AI 中心)**：專注於醫療影像、基因數據分析與臨床輔助診斷。
+  * **SMU School of Computing and Information Systems (新加坡管理大學)**：專注於軟體工程、商業智慧與 AI 法規／倫理研究。
 
 
 * **泰國**
-* **Chulalongkorn University - Center for Artificial Intelligence (Chula AI, 朱拉隆功大學 AI 中心)**：推動Generative AI（如 ChulaGENIE）與智慧城市等解決方案。
-* **VISTEC (Vidyasirimedhi Institute of Science and Technology)**：泰國頂尖研究型大學，其信息科學與技術學院（IST）在電腦視覺與機器人領域具有極強研究能力。
-* **AIT - Asian Institute of Technology (亞洲理工學院)**：位於泰國的國際化研究機構，專注於智慧系統、遙測與環境 AI 應用。
+  * **Chulalongkorn University - Center for Artificial Intelligence (Chula AI, 朱拉隆功大學 AI 中心)**：推動Generative AI（如 ChulaGENIE）與智慧城市等解決方案。
+  * **VISTEC (Vidyasirimedhi Institute of Science and Technology)**：泰國頂尖研究型大學，其信息科學與技術學院（IST）在電腦視覺與機器人領域具有極強研究能力。
+  * **AIT - Asian Institute of Technology (亞洲理工學院)**：位於泰國的國際化研究機構，專注於智慧系統、遙測與環境 AI 應用。
 
 
 * **越南**
-* **VNU Information Technology Institute (越南國家大學資訊科技研究所)**：在河內與胡志明市分校均有研究小組，著重於語音識別、語意理解與智慧交通。
-* **HUST - Hanoi University of Science and Technology (河內科技大學)**：越南理工龍頭，設有數據科學與人工智慧研究小組。
+  * **VNU Information Technology Institute (越南國家大學資訊科技研究所)**：在河內與胡志明市分校均有研究小組，著重於語音識別、語意理解與智慧交通。
+  * **HUST - Hanoi University of Science and Technology (河內科技大學)**：越南理工龍頭，設有數據科學與人工智慧研究小組。
 
 
 * **馬來西亞**
-* **UTM - Universiti Teknologi Malaysia (馬來西亞工藝大學) AI Center**：在工業自動化、機器視覺與物聯網（AIoT）領域居領先地位。
-* **UM - Universiti Malaya (馬來亞大學) Center for Data Science**：著重於巨量資料分析、機器學習與生物資訊學。
+  * **UTM - Universiti Teknologi Malaysia (馬來西亞工藝大學) AI Center**：在工業自動化、機器視覺與物聯網（AIoT）領域居領先地位。
+  * **UM - Universiti Malaya (馬來亞大學) Center for Data Science**：著重於巨量資料分析、機器學習與生物資訊學。
 
 
 * **菲律賓**
-* **UP Artificial Intelligence Program (菲律賓大學 AI 計畫)**：由 UP Diliman 領導，提供全菲首個專門的 AI 研究學位與學術實驗室。
+  * **UP Artificial Intelligence Program (菲律賓大學 AI 計畫)**：由 UP Diliman 領導，提供全菲首個專門的 AI 研究學位與學術實驗室。
 
 
 
