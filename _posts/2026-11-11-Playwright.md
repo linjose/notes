@@ -1,3 +1,12 @@
+---
+layout: post
+title: Playwright
+date: 2026-11-11
+reading_time: 20 min read
+tags: [Automatic]
+excerpt: 
+---
+
 Playwright 是由微軟（Microsoft）開源的現代化網頁自動化與端到端測試框架，其 Python 語言版本（`playwright-python`）廣泛應用於自動化測試與動態網頁爬蟲領域。
 
 ---
