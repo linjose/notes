@@ -1,3 +1,13 @@
+---
+layout: post
+title: LLM post-training vs fine-tuning
+date: 2026-11-15
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
+
 # LLM post-training vs fine-tuning
 
 
