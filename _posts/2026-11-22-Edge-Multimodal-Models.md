@@ -1,3 +1,12 @@
+---
+layout: post
+title: 邊緣端小型 GPU 之多模態人工智慧系統架構與實作指南
+date: 2026-11-22
+reading_time: 20 min read
+tags: [AI]
+excerpt: 
+---
+
 # 邊緣端小型 GPU 之多模態人工智慧系統架構與實作指南
 
 ## 一、 前言與硬體資源邊界分析
